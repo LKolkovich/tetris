@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тетрис на JavaScript</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <script type="module" src="../script/game/Main.js"></script>
+</head>
+<body>
+<div class="tetris-container">
+  <header>
+    <h1>Тетрис</h1>
+  </header>
+  <main>
+    <div class="game-area">
+      <canvas id="gameCanvas" width="300" height="600"></canvas>
+      <div class="sidebar">
+        <div class="next-piece">
+          <h2>Следующее</h2>
+          <canvas id="nextCanvas" width="120" height="120"></canvas>
+        </div>
+        <div class="score">
+          <h2>Счет</h2>
+          <p id="score">0</p>
+        </div>
+        <div class="score">
+          <h2 id="username"></h2>
+          <p id="best">0</p>
+        </div>
+        <button class="leaderBoardOpener">
+            <a href="leaderboard.html">Таблица лидеров</a>
+        </button>
+        <div class="controls">
+          <h2>Управление</h2>
+          <ul>
+            <li>← / →: Влево / Вправо</li>
+            <li>↓: Ускорить падение</li>
+            <li>↑ или Space: Поворот</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <button id="startButton">Начать</button>
+  </footer>
+</div>
+
+</body>
+</html>
