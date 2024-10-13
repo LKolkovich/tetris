@@ -8,7 +8,7 @@ class EventEmitter {
     }
 
     unsubscribe(eventName, listener) {
-        const subs = this.#listeners[eventName];
+        const subs = this.listeners[eventName];
         if (subs) {
             this.listeners[eventName] = subs.filter(sub => sub !== listener);
         }
