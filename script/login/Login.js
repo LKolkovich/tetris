@@ -7,7 +7,7 @@ let localStorageManager = new LocalStorageManager();
 function handleSubmit() {
     const username = document.getElementById('username').value.trim();
 
-    if (username && username.length > 10) {
+    if (username && username.length > 10    ) {
         alert('Пожалуйста, введите имя пользователя длиной 10 или менее.');
     } else if(username) {
         localStorageManager.saveUserName(username);

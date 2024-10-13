@@ -60,7 +60,6 @@ class GameConfig {
         this.gameCanvas = document.getElementById('gameCanvas');
         this.nextPieceCanvas = document.getElementById('nextCanvas');
         this.score = document.getElementById('score');
-        this.bestResult = document.getElementById('best');
         this.minFrames = 15;
         this.maxFrames= 75;
         this.username = document.getElementById('username');

@@ -10,12 +10,10 @@ class Render {
         this.nextPieceCanvas = config.nextPieceCanvas;
         this.nextPieceCanvasContext = this.nextPieceCanvas.getContext('2d');
         this.score = config.score;
-        this.bestResult = config.bestResult;
         this.username = config.username;
         this.localStorageManager = new LocalStorageManager();
         this.game.subcribeEvent('gameOver', this.renderGameOver.bind(this));
         this.game.subcribeEvent('render', this.renderGame.bind(this));
-        this.game.subcribeEvent('startGame', this.fillBestResult.bind(this));
     }
 
     renderGame() {
@@ -28,7 +26,7 @@ class Render {
     }
 
     renderName() {
-        this.username.innerText = 'Рекорд ' + this.localStorageManager.getUserName();
+        this.username.innerText = this.localStorageManager.getUserName();
     }
 
     renderBoard() {
@@ -76,10 +74,6 @@ class Render {
 
     fillScore() {
         this.score.innerText = this.game.getScore();
-    }
-
-    fillBestResult() {
-        this.bestResult.innerText = this.game.scoreManager.getBestResult();
     }
 
     renderGameOver() {

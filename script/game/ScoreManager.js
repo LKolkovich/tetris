@@ -26,10 +26,6 @@ class ScoreManager {
         this.localStorageManager.saveUserBestResult(this.currentScore);
     }
 
-    getBestResult() {
-       return this.localStorageManager.getUserBestResult();
-    }
-
     getScore() {
         return this.currentScore;
     }

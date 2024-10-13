@@ -24,11 +24,6 @@ class LocalStorageManager {
         localStorage.setItem(LocalStorageManager.bestResultKey, JSON.stringify(bestScores));
     }
 
-    getUserBestResult() {
-        let bestScores = JSON.parse(localStorage.getItem(LocalStorageManager.bestResultKey)) || {};
-        return bestScores[localStorage.getItem(LocalStorageManager.currentUserKey)];
-    }
-
     getBestResultsTable() {
         let bestScores = JSON.parse(localStorage.getItem('bestTable')) || {};
         let leadersArray = Object.entries(bestScores).map(([username, score]) => ({username, score}));
